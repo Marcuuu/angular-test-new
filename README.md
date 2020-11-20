@@ -32,3 +32,9 @@
 ## API testing commands
 
 1. For viewing all messages `curl http://localhost:8080/api/messages`
+  Payload:
+  [{"id":0,"date":"5/10/2020","message":"bbbbasdasdasdasd","oldName":"aaaa","newName":"aaaaaasdasdasd"},{"id":1,"name":"bbbb","date":"5/10/2020","message":"cccc"},{"id":2,"date":"5/10/2020","message":"bobby loves food 2 2 2","oldName":"bobby","newName":"bobby mew"},{"id":3,"name":"asdasd","date":"5/10/2020","message":"asdasdasd"}]
+
+2. For adding a new message `curl http://localhost:8080/api/add-message`
+
+3. For updating a message `curl http://localhost:8080/api/update-message`
