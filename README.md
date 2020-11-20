@@ -27,7 +27,8 @@
 4. (http://localhost:8080) is the link for the server
 4. Click on `View Messages` to view all messages
 5. Click on `Add Message` to add a message to the list
+6. Click on `Update` button in `View Messages` to update a specific message
 
 ## API testing commands
 
-Append your test endpoint details
+1. For viewing all messages `curl http://localhost:8080/api/messages`
