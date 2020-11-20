@@ -1,0 +1,33 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: #e8e8e8;
+  .left {
+    .title {
+      font:{
+        size: 18px;
+        weight: 700;
+      }
+    }
+  }
+  .nav-ul {
+    display: flex;
+    align-items: center;
+    .each {
+      &:not(:first-child) {
+        margin:{
+          left: 10px;
+        }
+      }
+      a {
+        color: black;
+      }
+    }
+  }
+}

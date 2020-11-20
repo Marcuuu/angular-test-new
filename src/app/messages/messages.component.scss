@@ -1,0 +1,59 @@
+.messages-con {
+  .title {
+    font:{
+      size: 16px;
+      weight: 500;
+    }
+    margin:{
+      bottom: 20px;
+    }
+  }
+}
+
+.messages-list {
+  .each {
+    background: #fcfcfc;
+    padding: 20px;
+    border: 1px solid #ededed;
+    &:not(:last-child) {
+      margin:{
+        bottom: 20px;
+      }
+    }
+    .name {
+      display: inline-block;
+      vertical-align: middle;
+      text-align: left;
+      width: 50%;
+      padding:{
+        right: 10px;
+      }
+      font:{
+        size: 16px;
+        weight: 500;
+      }
+    }
+    .date {
+      display: inline-block;
+      vertical-align: middle;
+      text-align: right;
+      width: 50%;
+      padding:{
+        left: 10px;
+      }
+    }
+    .message {
+      margin:{
+        top: 10px;
+      }
+    }
+    .update-btn {
+      width: fit-content;
+      padding: 10px 20px;
+      margin:{
+        top: 10px;
+      }
+      background: #44c5ff;
+    }
+  }
+}

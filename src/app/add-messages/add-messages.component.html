@@ -1,0 +1,32 @@
+<form class="add-messages-con" [formGroup]="messageForm" (ngSubmit)="onSubmit(messageForm.value)">
+  <h2 class="title">Add a message</h2>
+  <div formGroupName="messageData">
+    <div class="input-group">
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Name"
+        formControlName="name">
+      <div
+        *ngIf="!messageForm.get('messageData.name').valid && messageForm.get('messageData.name').touched"
+        class="help-block"
+      >Please enter a name</div>
+    </div>
+    <div class="input-group">
+      <textarea
+        name="message"
+        id="message"
+        cols="30"
+        rows="10"
+        placeholder="Message"
+        formControlName="message"
+      ></textarea>
+      <div
+        *ngIf="!messageForm.get('messageData.message').valid && messageForm.get('messageDData.message').touched"
+        class="help-block"
+      >Please enter your message</div>
+    </div>
+  </div>
+  <button type="submit" class="submit-btn">Submit</button>
+</form>

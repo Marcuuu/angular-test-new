@@ -1,0 +1,42 @@
+<div class="update-message-con">
+  <h2 class="title">Update message</h2>
+  <form [formGroup]="updateMessageForm" (ngSubmit)="onUpdateMessage(updateMessageForm.value)">
+    <div formGroupName="updateMessageData">
+      <div class="input-group">
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          id="name"
+          formControlName="name"
+          [value]="name"
+          *ngIf="name"
+        >
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          id="name"
+          formControlName="name"
+          [value]="newName"
+          *ngIf="!name"
+        >
+      </div>
+      <div class="input-group">
+        <textarea
+          name="message"
+          placeholder="Message"
+          id="message"
+          cols="30"
+          rows="10"
+          formControlName="message"
+          [value]="message"
+        ></textarea>
+      </div>
+      <div class="input-group">
+        <input type="hidden" formControlName="index" [value]="index">
+      </div>
+    </div>
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+</div>

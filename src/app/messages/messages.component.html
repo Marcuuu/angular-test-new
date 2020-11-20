@@ -1,0 +1,13 @@
+<div class="content messages-con" id="content">
+  <h2 class="title">Messages</h2>
+  <ul class="messages-list" *ngIf="messages.length > 0">
+    <li class="each" *ngFor="let message of messages">
+      <h4 class="name" *ngIf="message.name">{{ message.name }}</h4>
+      <h4 class="name" *ngIf="!message.name">{{ message.newName }}</h4>
+      <p class="date">{{ message.date }}</p>
+      <p class="message">{{ message.message }}</p>
+      <button class="update-btn" (click)="onUpdateMessage(message.id)">Update</button>
+    </li>
+  </ul>
+  <p *ngIf="!hasMessages">No messages</p>
+</div>

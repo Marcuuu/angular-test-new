@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-test-new';
+  headerHeight = 0
+  footerHeight = 0
+  ngOnInit() {
+    this.headerHeight = document.getElementById('header').offsetHeight
+    this.footerHeight = document.getElementById('footer').offsetHeight
+  }
 }
