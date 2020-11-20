@@ -10,7 +10,8 @@
           id="name"
           formControlName="name"
           [value]="name"
-          *ngIf="name"
+          *ngIf="name != undefined"
+          class="name"
         >
         <input
           type="text"
@@ -19,7 +20,8 @@
           id="name"
           formControlName="name"
           [value]="newName"
-          *ngIf="!name"
+          *ngIf="newName != undefined"
+          class="newName"
         >
       </div>
       <div class="input-group">

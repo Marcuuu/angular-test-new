@@ -1,27 +1,33 @@
-# AngularTestNew
+# Angular Test - Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
+## How to submit your code assignment
 
-## Development server
+1. Fork the project from GitHub.
+2. Make your forked project to **private** 
+3. Add member of **ibmq2c** in **Manage Access**,  from Current Setting tab -> Manager access -> Invite a Collaborator -> lookup for **ibmq2c** -> add  **ibmq2c** to this repository.
+4. Complete your code and documentation in the forked project.
+5. Create a new plain text file in the root folder of the forked project. And make the file name in the format of "your full name", e.g. **Mark Leon**.
+6. Notify the code assignment is done or you can contact your **Interviewer/Talent Liaison Officer** to notify the same (we would be regularly checking the repo for any checkins).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Code assignment details
 
-## Code scaffolding
+1. UseAngular, with all basic libraries required to achieve the result inpackage.json file.
+2. Create new components displaying messages of your choice and output them beneath one another.
+3. Create Application header and footer
+4. Style the components using SCSS.
+5. Show simple CRUD example 
+6. The example should contain lazy loading routing.
+7. Use angular reactive forms for CRUD operations(ADD and Update) 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Steps and commands to run the application
 
-## Build
+1. Run `ng serve` to start the application
+2. Run `npm run startserver` to start the server
+3. Navigate to (http://localhost:4200) to view the application
+4. (http://localhost:8080) is the link for the server
+4. Click on `View Messages` to view all messages
+5. Click on `Add Message` to add a message to the list
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## API testing commands
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Append your test endpoint details

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-messages',
@@ -19,7 +20,7 @@ export class AddMessagesComponent implements OnInit {
     });
   }
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   onSubmit(postData: { name: string; message: string; }) {
     this.http
@@ -28,5 +29,6 @@ export class AddMessagesComponent implements OnInit {
         console.log(responseData)
       })
     console.log("submitting")
+    this.router.navigate(['/'])
   }
 }

@@ -13,12 +13,15 @@ import { Router } from '@angular/router';
 export class UpdateMessageComponent implements OnInit {
   updateMessageForm: FormGroup;
   messages = []
-  index = this.data.currentMessage.source.value
+  index:number
   name: string = ""
   newName: string = ""
   message: string = ""
 
   ngOnInit() {
+    this.data.currentMessage.subscribe(value => {
+      this.index = parseInt(value)
+    })
     this.updateMessageForm = new FormGroup({
       'updateMessageData': new FormGroup({
         'name': new FormControl(this.name, Validators.required),
@@ -28,7 +31,7 @@ export class UpdateMessageComponent implements OnInit {
       })
     })
     this.fetchMessages()
-    console.log(this.index)
+    console.log(this.newName)
   }
 
   constructor(private http: HttpClient, private data: MessageService, private router: Router) { }
@@ -46,13 +49,12 @@ export class UpdateMessageComponent implements OnInit {
         this.messages = messageArray
         console.log(this.messages)
         for (let i in this.messages) {
-          if (i == this.index) {
-            if (this.name == "") {
-              this.newName = this.messages[i].newName
-            }
-            else {
-              this.name = this.messages[i].name
-            }
+          let index = parseInt(i)
+          if (index == this.index) {
+            console.log(this.messages[i])
+            this.newName = this.messages[i].newName
+            this.name = this.messages[i].name
+            console.log(this.newName)
             this.message = this.messages[i].message
           }
         }
